@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>477</x>
+      <y>306</y>
+      <w>414</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>title=Etat de sante
+obj=Capteur Cardiaque~cc
+obj=ESP~e
+obj=Proches~p
+p-&gt;e : etatdesante(); on=e
+e-&gt;&gt;&gt;cc : hbAcq();
+cc.&gt;e : heartbeat;
+e-&gt;p : afficheEtat(); off=e</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
