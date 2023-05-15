@@ -10,4 +10,14 @@ Afin d'aider les personnes à mobilité fragile qui serai susceptible de tomber 
 ## Plan du projet
 Apres avoir décidé de l'intitulé de notre sujet nous avons concus les différents diagrammes UML avec l'aide de l'outil UMLET.
 
-# Diagramme des cas d'utilisations
+### Diagramme des cas d'utilisations
+![Texte alternatif](img/CasUtilisation.PNG)
+
+### Diagramme de séquence "Signaler chute"
+![Texte alternatif](img/CasUtilisation.PNG)
+
+### Diagramme de séquence "Etat de santé"
+![Texte alternatif](img/CasUtilisation.PNG)
+
+### Diagramme de séquence "Calibration"
+![Texte alternatif](img/CasUtilisation.PNG)
