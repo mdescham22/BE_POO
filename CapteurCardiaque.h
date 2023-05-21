@@ -16,9 +16,10 @@ class CapteurCardiaque{
                             //if the duty overtrip 2 second.
 
     public:
-    void CapteurCardiaque(int pinIn,pinOut);
+    CapteurCardiaque(int pinIn,int pinOut);
     void sendHeartbeat();
     void calculateHeartbeat();
     int getHeartbeat();
-    IRAM_ATTR void interrupt();
-}
+    void interrupt();
+};
+#endif
