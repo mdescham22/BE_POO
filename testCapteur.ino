@@ -1,17 +1,19 @@
 #include "CapteurCardiaque.h"
 
-void setup() {
-  int a;
-  // put your setup code here, to run once:
-  CapteurCardiaque Capt_C(D7,D3); //entree sur D7 et sortie sur D3
-  Capt_C.calculateHeartbeat();//calcul de la frequence
-  a=Capt_C.getHeartbeat();
-  Capt_C.sendHeartbeat();
-  
+//declaration du capteur en global
+CapteurCardiaque Capt_C(D7,LED_BUILTIN); //entree en D7 et sortie sur led-builtin
 
+void setup() {
+  Serial.begin(9600);
+  attachInterrupt(digitalPinToInterrupt(Capt_C.getPinEntree()), handler, RISING);//association des interruptions
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+ Serial.println("heart rate is:");
+ Serial.println(Capt_C.getHeartbeat());
+ delay(5000);
 }
+ IRAM_ATTR void handler(){
+  Capt_C.interrupt();
+}
+
