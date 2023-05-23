@@ -3,6 +3,7 @@
 
 
 class CapteurCardiaque{
+
     private:
     unsigned char counter;
     unsigned long temp[21];
@@ -10,16 +11,26 @@ class CapteurCardiaque{
     bool data_effect;
     bool DEAD;
     unsigned int heart_rate;//the measurement result of heart rate
-
-    const int max_heartpluse_duty = 2000;//you can change it follow your system's request.
-                            //2000 meams 2 seconds. System return error 
-                            //if the duty overtrip 2 second.
+    int pinEntree;
+    int pinSortie;
+    const int max_heartpluse_duty = 2000;//intervalle max de 2 sec entre les battements
 
     public:
+    //constructeur
     CapteurCardiaque(int pinIn,int pinOut);
-    void sendHeartbeat();
-    void calculateHeartbeat();
+    //assesseurs
+    int getPinEntree();
+    int getPinSortie();
     int getHeartbeat();
+    bool getState();
+    //methodes
+    void sendHeartbeat();
+    void arrayInit();
+    void sum();
     void interrupt();
+    
 };
+
+static void handler();
+
 #endif
