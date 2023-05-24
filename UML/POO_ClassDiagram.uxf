@@ -11,13 +11,13 @@
     </coordinates>
     <panel_attributes>ESP8266
 --
-- acc integer
-- heartbeat integer
+- acc: integer
+- heartbeat: integer
 
 --
-+ accAcq() void
-+ hbAcq() void
-+ displayState() void
++ accAcq(): void
++ hbAcq(): void
++ displayState(): void
 </panel_attributes>
     <additional_attributes/>
   </element>
