@@ -1,23 +1,7 @@
 # BE Programmation Orienté Objet
 ## Bracelet détecteur de chute
-## Introduction
-Afin d'aider les personnes à mobilité fragile qui serai susceptible de tomber et de rencontrer des difficultés à se relever, nous avons décider de concevoir un dispositif permettant la détection de ces chutes tout en informant les proches de la victime. Pour ce faire le système est composé :
-- Microcontroleur ESP8266
-- Accelerometre ADXL345
-- Bouton Externe
-- Buzzer
-
-## Plan du projet
-Apres avoir décidé de l'intitulé de notre sujet nous avons concus les différents diagrammes UML avec l'aide de l'outil UMLET.
-
-### Diagramme des cas d'utilisations
-![Texte alternatif](img/CasUtilisation.PNG)
-
-### Diagramme de séquence "Signaler chute"
-![Texte alternatif](img/CasUtilisation.PNG)
-
-### Diagramme de séquence "Etat de santé"
-![Texte alternatif](img/CasUtilisation.PNG)
-
-### Diagramme de séquence "Calibration"
-![Texte alternatif](img/CasUtilisation.PNG)
+### Implémentation
+Ouvrez le fichier CodeFinal.ino, saisissez la carte NodeMCU 1.0 ainsi que le port sur lequel il est branché.
+Implementer le programme dans la carte.
+### Utilisation
+Utilisez le détecteur cardiaque et appuyez sur le bouton. À ce moment-là, le programme détectera la présence d'une chute. Si une chute est détectée mais qu'elle est sans danger, vous avez la possibilité de l'annuler dans les 5 secondes en appuyant sur le bouton. Dans le cas contraire, le piezo émettra un son d'alarme pour alerter les personnes aux alentours et tenter de vous réveiller en cas de perte de conscience. Vous aurez toujours la possibilité de stopper l'alarme en appuyant sur le bouton. Si le pouls n'est plus détecté, le système considérera que vous faites un arrêt cardiaque et émettra une alarme différente avec le son d'alarme du piezo.
